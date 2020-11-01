@@ -25,15 +25,15 @@ public class GameHelper {
 
     public ArrayList<String> placeDotCom(int comSize){
         ArrayList<String> alphaCells = new ArrayList<String>();
-        String [] alphacoords = new String [comSize];// 保存字符串
-        String temp = null;// 临时字符串
-        int [] coords = new int[comSize];// 现有字符串
-        int attempts = 0;// 目前测试的字符串
-        boolean success = false;// 找到适合的位置吗？
-        int location = 0;// 目前起点
+        String [] alphacoords = new String [comSize];
+        String temp = null;
+        int [] coords = new int[comSize];
+        int attempts = 0;
+        boolean success = false;
+        int location = 0;
 
-        comCount++;// 现在处理到第n个
-        int incr = 1;// 水平增量
+        comCount++;
+        int incr = 1;
         if((comCount % 2) == 1){
             incr = gridLength;
         }
