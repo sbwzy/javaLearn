@@ -13,7 +13,7 @@ class A {
 
 class B extends A {
     void m1(){
-        System.out.println("B's m1, ");
+        System.out.println("B's m2, ");
     }
 }
 
@@ -29,7 +29,6 @@ public class Mixed2 {
         B b = new B();
         C c = new C();
         A a2 = new C();
-        // C c2 = new B();
 
         a.m1();
         a.m2();
@@ -46,9 +45,5 @@ public class Mixed2 {
         a2.m1();
         a2.m2();
         a2.m3();
-        // System.out.println("----------------");
-        // c2.m1();
-        // c2.m2();
-        // c2.m3();
     }
 }
