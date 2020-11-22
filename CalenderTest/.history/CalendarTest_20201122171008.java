@@ -1,4 +1,4 @@
-import java.util.*;
+import static java.util.Calendar.*;
 
 public class CalendarTest{
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Calendar;
 
 public class CalendarTest{
     public static void main(String[] args){
@@ -9,10 +9,10 @@ public class CalendarTest{
         c.setTimeInMillis(day1); // 加上一个小时
         System.out.println("new hour "+c.get(c.HOUR_OF_DAY)); 
         c.add(c.DATE, 35); // 加上35天
-        System.out.println("add 35 days  " + c.getTime());
-        c.roll(c.DATE, 35); // 滚动35天，只有日期字段动，月份不会动:roll()只加减时间值，不进位
+        System.out.println("add 35 days " + c.getTime());
+        c.roll(c.DATE, 35); // 滚动35天，只有日期字段动，月份不会动
         System.out.println("roll 35 days " + c.getTime());
         c.set(c.DATE, 1); // 直接设定DATE的值
-        System.out.println("set to 1     " + c.getTime());
+        System.out.println("set to 1 " + c.getTime());
     }
 }
