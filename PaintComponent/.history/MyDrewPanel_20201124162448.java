@@ -14,8 +14,6 @@ class MyDrewPanel extends JPanel {
         blue = (int) (Math.random() * 255);
         Color endColor = new Color(red, green, blue);
 
-        GradientPaint gradient = new GradientPaint(70, 70, startColor, 150, 150, endColor);
-        g2d.setPaint(gradient);
-        g2d.fillOval(70, 70, 100, 100);
+        GradientPaint gradent = new GradientPaint()
     }
 }
