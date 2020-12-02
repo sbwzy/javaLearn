@@ -1,5 +1,5 @@
 import java.awt.BorderLayout;
-import java.awt.event.*;
+
 import javax.swing.*;
 
 public class TwoButtons {
@@ -16,13 +16,13 @@ public class TwoButtons {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JButton labelButton = new JButton("Change Label");
-        labelButton.addActionListener((ActionListener) new LabelListener());
+        labelButton.addActionListener(new LabelListener());
 
         JButton colorButton = new JButton("Change Circle");
         colorButton.addActionListener(new ColorListener());
 
         label = new JLabel("I'm a label");
-        MyDrawPanel drawPanel = new MyDrawPanel();
+        MyDrawPanel drawPanel = new MydrawPanel();
 
         frame.getContentPane().add(BorderLayout.SOUTH, colorButton);
         frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
