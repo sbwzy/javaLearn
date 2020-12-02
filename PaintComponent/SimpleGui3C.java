@@ -17,7 +17,7 @@ public class SimpleGui3C implements ActionListener {
         JButton button = new JButton("Change colors");
         button.addActionListener(this);
 
-        MyDrewPanel drawpanel = new MyDrewPanel();
+        MyDrawPanel drawpanel = new MyDrawPanel();
 
         frame.getContentPane().add(BorderLayout.SOUTH, button);
         frame.getContentPane().add(BorderLayout.CENTER, drawpanel);
