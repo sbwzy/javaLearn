@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MiniMusicCmdLine",
+            "request": "launch",
+            "mainClass": "MiniMusicCmdLine",
+            "projectName": "MiniMusicCmdLine(demo2)_27db1efc"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - External Terminal",
             "request": "launch",
             "console": "externalTerminal",
