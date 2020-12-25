@@ -91,12 +91,6 @@ public class QuizCardBuilder {
         }
     }
 
-    private void clearCard() {
-        question.setText("");
-        answer.setText("");
-        question.requestFocus();
-    }
-
     private void saveFile(File file) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));

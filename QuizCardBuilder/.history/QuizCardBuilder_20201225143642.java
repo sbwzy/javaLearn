@@ -74,7 +74,7 @@ public class QuizCardBuilder {
         }
     }
 
-    public class SaveMenuListener implements ActionListener {
+    public class SaveCardListener implements ActionListener {
         public void actionPerformed(ActionEvent ev) {
             QuizCard card = new QuizCard(question.getText(), answer.getText());
             cardList.add(card);
@@ -84,17 +84,11 @@ public class QuizCardBuilder {
         }
     }
 
-    public class NewMenuListener implements ActionListener {
+    public class NewCardListener implements ActionListener {
         public void actionPerformed(ActionEvent ev) {
             cardList.clear();
             clearCard();
         }
-    }
-
-    private void clearCard() {
-        question.setText("");
-        answer.setText("");
-        question.requestFocus();
     }
 
     private void saveFile(File file) {

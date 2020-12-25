@@ -74,41 +74,15 @@ public class QuizCardBuilder {
         }
     }
 
-    public class SaveMenuListener implements ActionListener {
+    public class SaveCardListener implements ActionListener {
         public void actionPerformed(ActionEvent ev) {
             QuizCard card = new QuizCard(question.getText(), answer.getText());
-            cardList.add(card);
-            JFileChooser fileSave = new JFileChooser();
-            fileSave.showSaveDialog(frame);
-            saveFile(fileSave.getSelectedFile());
         }
     }
 
-    public class NewMenuListener implements ActionListener {
+    public class NextCardListener implements ActionListener {
         public void actionPerformed(ActionEvent ev) {
-            cardList.clear();
-            clearCard();
-        }
-    }
 
-    private void clearCard() {
-        question.setText("");
-        answer.setText("");
-        question.requestFocus();
-    }
-
-    private void saveFile(File file) {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-
-            for(QuizCard card:cardList) {
-                writer.write(card.getQuestion() + "/");
-                writer.write(card.getAnswer() + "\n");
-            }
-            writer.close();
-        } catch (IOException ex) {
-            System.out.println("couldn't write the cardList out");
-            ex.printStackTrace();
         }
     }
 }
