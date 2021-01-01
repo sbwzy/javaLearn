@@ -1,7 +1,7 @@
 import java.io.*;
  
 public class QuizCard implements Serializable {
-   private static final long serialVersionUID = -4640357841316419615L;
+    private static final long serialVersionUID = -4640357841316419615L;
     
    private String uniqueID;
    private String category;
