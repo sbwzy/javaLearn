@@ -7,6 +7,7 @@ import java.io.*;
 public class QuizCardPlayer {
  
    private JTextArea display;
+   private JTextArea answer;
    private ArrayList<QuizCard> cardList;
    private QuizCard currentCard;
    private int currentCardIndex;

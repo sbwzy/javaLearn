@@ -7,6 +7,7 @@ import java.io.*;
 public class QuizCardPlayer {
  
    private JTextArea display;
+   private JTextArea answer;
    private ArrayList<QuizCard> cardList;
    private QuizCard currentCard;
    private int currentCardIndex;
@@ -97,18 +98,7 @@ public class QuizCardPlayer {
        // 显示第一个卡片
    }
 
-   private void makeCard(String lineToParse) {
+   private void makeCard(String lineToPString) {
        String[] result = lineToParse.split("/");
-       QuizCard card = new QuizCard(result[0], result[1]);
-       cardList.add(card);
-       System.out.println("made a card");
-   }
-
-   private void showNextCard() {
-       currentCard = cardList.get(currentCardIndex);
-       currentCardIndex++;
-       display.setText(currentCard.getQuestion());
-       nextButton.setText("Show answer");
-       isShowAnswer = true;
    }
 }
