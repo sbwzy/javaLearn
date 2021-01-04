@@ -16,7 +16,6 @@ public class DailyAdviceServer {
                 writer.println(advice);
                 writer.close();
                 System.out.println(advice);
-                serverSock.close();
             }
         } catch (IOError ex) {
             ex.printStackTrace();
