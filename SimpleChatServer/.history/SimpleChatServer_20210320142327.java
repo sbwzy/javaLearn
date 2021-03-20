@@ -50,7 +50,7 @@ public class SimpleChatServer {
     }
 
     public void tellEveryone(String message) {
-        Iterator it = clientOutputStreams.iterator();
+        Iterable it = clientOutputStreams.iterator();
         while (it.hasNext()) {
             try {
                 PrintWriter writer = (PrintWriter) it.next();
