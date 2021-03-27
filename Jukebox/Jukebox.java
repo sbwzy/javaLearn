@@ -18,9 +18,10 @@ public class Jukebox {
             File file = new File("SongList.txt");
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = null;
-            While((line = reader.readLine()) != null) {
+            while((line = reader.readLine()) != null) {
                 addSong(line);
             }
+            reader.close();
         } catch (Exception ex) {ex.printStackTrace();}
     }
 
