@@ -1,15 +1,26 @@
 import java.util.*;
 import java.io.*;
 
-public class Jukebox {
-    ArrayList<String> songList = new ArrayList<String>();
-    
+public class Jukebox5 {
+    ArrayList<Song> songList = new ArrayList<Song>();
     public static void main (String[] args) {
-        new Jukebox().go();
+        new Jukebox5().go();
     }
 
-    void go() {
+    class ArtistCompare implements Comparator<Song> {
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
+    }
+
+    public void go() {
         getSongs();
+        System.out.println(songList);
+        Collections.sort(songList);
+        System.out.println(songList);
+
+        ArtistCompare artistCompare = new ArtistCompare();
+
         System.out.println(songList);
     }
 
